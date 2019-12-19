@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <%- include('../../layout/head.ejs'); %>
+</head>
+<body>
+    <%- include('../../layout/header.ejs'); %> 
+  <main>
+       <h2>Search by Title or Author</h2>
+ 
+    
+      <form action="/searches" method="post">
+        <input type="text" name="search" placeholder="Enter a title or author" id="enter"><br />
+        <fieldset class="radio">
+          <span class="inline-block">
+            <label for="title">Title</label>
+            <input type="radio" name="search" value="title" >
+          </span>
+        </fieldset><br />
+        <fieldset  class="radio">
+          <span class="inline-block">
+          <label for="author">Author</label>
+            <input type="radio" name="search" value="author" >
+          </span>
+        </fieldset><br />
+        <div>
+        <input type="submit" value="Search the Google Books API" id="button">
+      </div>
+      </form>
+  
+    
+  </main>
+  
+</body>
+</html>
